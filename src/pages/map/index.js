@@ -1,6 +1,6 @@
 import React, { Component } from 'react'
-import { Text, View, StyleSheet } from 'react-native'
-import MapView, { PROVIDER_GOOGLE } from 'react-native-maps';
+import { Text, View, StyleSheet,Linking } from 'react-native'
+import MapView, { PROVIDER_GOOGLE, Callout } from 'react-native-maps';
 import { Marker } from 'react-native-maps';
 
 
@@ -19,18 +19,21 @@ export default class MapsKontak extends Component {
                 
               }}
             >
+
             <MapView.Marker
+                onPress={() => Linking.openURL('google.navigation:q=-7.4192242+109.2198008')}
                 coordinate={{
                     latitude: 51.4999969,
                     longitude: -0.109278,}}
-                title="Shinta Disini"
+                title="Norman Disini"
                 description="217 Waterloo Rd, South Bank, London SE1 8XH, Inggris Raya"
-                    />
+                    />  
             <MapView.Marker
+               onPress={() => Linking.openURL('google.navigation:q=-7.427928, 109.277892')}
                 coordinate={{
                     latitude: 51.4998687,
                     longitude: -0.0951529,}}
-                title="Danang Disini"
+                title="Rizal Disini"
                 description="7-14 Great Dover St, London SE1 4YR, Inggris Raya"
                     />
             </MapView>
